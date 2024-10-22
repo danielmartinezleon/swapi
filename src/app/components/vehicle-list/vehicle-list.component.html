@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <div class="row mt-2 mb-2">
+      @for(vehicle of vehicleList; track vehicle.name) {
+      <div class="col-md-3 col-12">
+        <div class="card" style="width: 18rem">
+          <img [src]="getImagen(vehicle.url)" class="card-img-top" [alt]="vehicle.name" />
+          <div class="card-body">
+            <h5 class="card-title">{{ vehicle.name }}</h5>
+            <p class="card-text">
+              Model: {{ vehicle.model }}<br />
+              Manufacturer: {{ vehicle.manufacturer }}<br />
+              Length: {{ vehicle.length }} meters<br />
+              Speed: {{ vehicle.max_atmosphering_speed }} km/h<br />
+              Crew: {{ vehicle.crew }}<br />
+              Passengers: {{ vehicle.passengers }}<br />
+              Class: {{ vehicle.vehicle_class }}<br />
+              Cargo Capacity: {{ vehicle.cargo_capacity }} kg
+            </p>
+
+            <a href="{{ vehicle.url }}" class="btn btn-primary">More Info</a>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+</div>

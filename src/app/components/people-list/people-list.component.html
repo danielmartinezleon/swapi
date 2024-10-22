@@ -1,0 +1,15 @@
+<div class="container-fluid">
+    <div class="row mt-2 mb-2">
+      @for(people of peopleList; track people.name) {
+      <div class="col-md-3 col-12">
+        <div class="card" style="width: 18rem">
+          <img [src]="getImagen(people.url)" class="card-img-top" [alt]="people.name" />
+          <div class="card-body">
+            <h5 class="card-title">{{ people.name }}</h5>
+            <a href="{{ people.url }}" class="btn btn-primary">More Info</a>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+</div>
